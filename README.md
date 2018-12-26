@@ -2,6 +2,12 @@
 
 This is an implementation of β-variational auto-encoders (β-VAE), the state-of-the-art model for unsupervised visual disentangled representation learning. This work replicating DeepMind's papers ["β-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework"](https://openreview.net/forum?id=Sy2fzU9gl) and ["Understanding disentangling in β-VAE"](https://arxiv.org/abs/1804.03599)
 
+## What is disentanglement?
+
+A disentangled representation can be defined as one where single latent units are sensitive to changes in single generative factors, while being relatively invariant to changes in other factors. In simple words, a feature representation can be thought of as a coordinate system with each latent unit being one of its many axes. Even if all the features (i.e., axes) are independent, they may not always be disentangled. Take for instance a coordinate system \vec{i} and \vec{j} forms a better representation of 2D space than \vec{i} and ^\vec{i}/_5 + ^\sqrt{3}\vec{j}/_2
+
+## Why do we need disentanglement?
+
 ## Dataset Description
 
 [dSprites](https://github.com/deepmind/dsprites-dataset) is a dataset of 2D shapes procedurally generated from 6 ground truth independent latent factors. These factors are color, shape, scale, rotation, x and y positions of a sprite.
