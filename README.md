@@ -14,14 +14,16 @@ A disentangled representation can be defined as one where single latent units ar
 
 ### Usefulness?
 
-- For example, a model trained on a dataset of 3D objects might learn independent latent units sensitive to single independent data generative factors, such as object identity, position, scale, lighting or colour, thus acting as an inverse graphics model (Kulkarni et al., 2015).
+- A model trained on a dataset of 3D objects might learn independent latent units sensitive to single independent data generative factors, such as object identity, position, scale, lighting or colour, thus acting as an inverse graphics model (Kulkarni et al., 2015).
 - Scenarios which require knowledge transfer, where faster learning is achieved by reusing learnt representations for numerous tasks.
 - zero-shot inference, where reasoning about new data is enabled by recombining previously learnt factors.
 
 
 ## Methodology
 
-Follows the architecture of variational autoencoder (VAE) framework with an adjustable hyperparameter β that balances latent channel capacity and independence constraints with reconstruction accuracy.
+Follows the architecture of variational autoencoder (VAE) framework with an adjustable hyperparameter β (β = 1 corresponds to regular VAE). This hyperparameter imposes a limit on the capacity of the latent information channel and an emphasis on learning statistically independent latent factors. This, when combined with the data log likelihood maximisation objective of generative models, leads to the model acquiring the most efficient latent representation of the data, which is disentangled if the data is produced using at least some ground truth factors of variation that are independent.
+
+![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/disentangled_loss.png)
 
 ## Dataset Description
 
