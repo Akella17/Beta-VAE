@@ -8,6 +8,10 @@ A disentangled representation can be defined as one where single latent units ar
 
 ## Why do we need disentanglement?
 
+- good interpretability
+- can aid an RL agent to achieve better transfer performance outside of the training data distribution
+- easy generalization, shows possibility to advance towards the robustness of biological intelligence
+
 ## Dataset Description
 
 [dSprites](https://github.com/deepmind/dsprites-dataset) is a dataset of 2D shapes procedurally generated from 6 ground truth independent latent factors. These factors are color, shape, scale, rotation, x and y positions of a sprite.
