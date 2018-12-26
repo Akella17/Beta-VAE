@@ -4,7 +4,7 @@ This is an implementation of β-variational auto-encoders (β-VAE), the state-of
 
 ## What is disentanglement?
 
-A disentangled representation can be defined as one where single latent units are sensitive to changes in single generative factors, while being relatively invariant to changes in other factors. In simple words, a feature representation can be thought of as a coordinate system with each latent unit being one of its many axes. Even if all the features (i.e., axes) are independent, they may not always be disentangled. Take for instance a coordinate system ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{j}) forms a better representation of 2D space than ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{i}/2&plus;\sqrt{3}\vec{j}/2)
+A disentangled representation can be defined as one where single latent units are sensitive to changes in single generative factors, while being relatively invariant to changes in other factors. In simple words, a feature representation can be thought of as a coordinate system with each latent unit being one of its many axes. Even if all the features (i.e., axes) are independent, they may not always be disentangled. Take for instance a coordinate system ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{j}) forms a better representation of 2D space than ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{i}/_2&plus;\sqrt{3}\vec{j}/_2)
 
 ## Why do we need disentanglement?
 
