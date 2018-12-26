@@ -6,15 +6,18 @@ This is an implementation of β-variational auto-encoders (β-VAE), the state-of
 
 A disentangled representation can be defined as one where single latent units are sensitive to changes in single generative factors, while being relatively invariant to changes in other factors. Here a feature representation can be thought of as a coordinate system with each latent unit being one of its many axes. There are many ways to extract independent feature representations (PCA and ICA decompositions), however independence does not guarantee disentanglement. Take for instance a 2D coordinate system with generative factors as ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{j}) vectors. While ![](https://latex.codecogs.com/gif.latex?3\vec{i}/_5&plus;4\vec{j}/_5) and ![](https://latex.codecogs.com/gif.latex?\vec{i}/_2&plus;\sqrt{3}\vec{j}/_2) form independent factors in 2D space, they are not disentangled, i.e., change of one latent factor will affect multiple generative factors.
 
-### Usefulness?
-
-For example, a model trained on a dataset of 3D objects might learn independent latent units sensitive to single independent data generative factors, such as object identity, position, scale, lighting or colour, thus acting as an inverse graphics model (Kulkarni et al., 2015).
-
 ## Why do we need disentanglement?
 
 - good interpretability
 - aids an RL agent to achieve better transfer performance outside of the training data distribution
 - a step towards the generality and robustness of biological intelligence
+
+### Usefulness?
+
+- For example, a model trained on a dataset of 3D objects might learn independent latent units sensitive to single independent data generative factors, such as object identity, position, scale, lighting or colour, thus acting as an inverse graphics model (Kulkarni et al., 2015).
+- Scenarios which require knowledge transfer, where faster learning is achieved by reusing learnt representations for numerous tasks.
+- zero-shot inference, where reasoning about new data is enabled by recombining previously learnt factors.
+
 
 ## Methodology
 
