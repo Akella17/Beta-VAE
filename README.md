@@ -83,7 +83,7 @@ z8 | ![](disentangle_anim/anim_z8.gif) |           | 0.9483
 z9 | ![](disentangle_anim/anim_z9.gif) | Pos Y     | 0.0004
 
 
-## Reconstruction result
+## Reconstruction
 
 Left: original Right: reconstructed image
 
