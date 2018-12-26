@@ -4,9 +4,7 @@ This is an implementation of β-variational auto-encoders (β-VAE), the state-of
 
 ## What is disentanglement?
 
-A disentangled representation can be defined as one where single latent units are sensitive to changes in single generative factors, while being relatively invariant to changes in other factors. There are many ways to extract independent feature representations (PCA, ICA, ...), however independence does not guarantee disentanglement.
-
-In simple words, a feature representation can be thought of as a coordinate system with each latent unit being one of its many axes. Even if all the features (i.e., axes) are independent, they may not always be disentangled. Take for instance a coordinate system with axes as ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{j}) forms a better representation of 2D space than ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{i}/_2&plus;\sqrt{3}\vec{j}/_2)
+A disentangled representation can be defined as one where single latent units are sensitive to changes in single generative factors, while being relatively invariant to changes in other factors. Here a feature representation can be thought of as a coordinate system with each latent unit being one of its many axes. There are many ways to extract independent feature representations (PCA and ICA decompositions), however independence does not guarantee disentanglement. Take for instance a 2D coordinate system with generative factors being ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{j}) vectors. While ![](https://latex.codecogs.com/gif.latex?\vec{i}) and ![](https://latex.codecogs.com/gif.latex?\vec{i}/_2&plus;\sqrt{3}\vec{j}/_2) form independent factors in 2D space, they are not disentangles, i.e., change of one latent factor will affect multiple generative factors.
 
 ## Why do we need disentanglement?
 
