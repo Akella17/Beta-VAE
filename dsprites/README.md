@@ -10,3 +10,11 @@ All possible combinations of these latents are present exactly once, generating 
 * Orientation: 40 values in [0, 2 pi]
 * Position X: 32 values in [0, 1]
 * Position Y: 32 values in [0, 1]
+
+![dSprites GIF](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/dsprites.gif)
+
+- `imgs` : (737280 x 64 x 64, uint8) Images in black and white.
+- `latents_values` : (737280 x 6, float64) Values of the latent factors.
+- `latents_classes` : (737280 x 6, int64) Integer index of the latent factor values. Useful as classification targets.
+- `metadata` : some additional information, including the possible latent values.
+
