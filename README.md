@@ -27,7 +27,7 @@ Follows the architecture of variational autoencoder (VAE) framework with an adju
 
 The above equation forms the objective function that needs to be **maximized**. While the first term accounts for reconstruction fidelity, the second term is a measure of the KL distance of learnt posterior and Gaussian prior *p(z)* (puts implicit independence pressure due to the isotropic nature of Gaussian prior). Higher values of β should encourage learning a more disentangled representation. The extra pressures coming from high β values, however, may create a trade-off between reconstruction fidelity and the quality of disentanglement within the learnt latent representations.
 
-The latest ![paper](https://arxiv.org/abs/1804.03599) suggests new intuitions and theoretical assessments of the emergence of disentangled representation in variational autoencoders. It proposes a modification to the training regime of β-VAE, that progressively increases the information capacity of the latent code during training. This modification facilitates the robust learning of disentangled representations in β-VAE, without the previous trade-off in reconstruction accuracy. The new objective function is as follows:
+The latest [paper](https://arxiv.org/abs/1804.03599) suggests new intuitions and theoretical assessments of the emergence of disentangled representation in variational autoencoders. It proposes a modification to the training regime of β-VAE, that progressively increases the information capacity of the latent code during training. This modification facilitates the robust learning of disentangled representations in β-VAE, without the previous trade-off in reconstruction accuracy. The new objective function is as follows:
 
 ![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/disentangled_loss.png)
 
@@ -60,7 +60,7 @@ All possible combinations of these latents are present exactly once, generating 
 - `latents_classes` : (737280 x 6, int64) Integer index of the latent factor values. Useful as classification targets.
 - `metadata` : some additional information, including the possible latent values.
 
-## 2D shape disentaglement
+## Results
 
 Result by changing latent Z from -3.0 to 3.0 with γ=100.0 and C=20.0
 
