@@ -1,6 +1,6 @@
 # β - VAE
 
-This is an implementation of β-variational auto-encoders (β-VAE), the state-of-the-art model for unsupervised visual disentangled representation learning. This work replicating DeepMind's papers ["β-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework"](https://openreview.net/forum?id=Sy2fzU9gl) and ["Understanding disentangling in β-VAE"](https://arxiv.org/abs/1804.03599)
+This is an implementation of β-variational auto-encoders (β-VAE), the state-of-the-art model for unsupervised visual disentangled representation learning. This work replicating DeepMind's papers ["β-VAE: Learning Basic Visual Concepts with a Constrained Variational Framework"](https://openreview.net/forum?id=Sy2fzU9gl) and ["Understanding disentangling in β-VAE"](https://arxiv.org/abs/1804.03599).
 
 ## What is disentanglement?
 
@@ -69,18 +69,14 @@ Latent variables with small variances seem extracting "x", "y", "rotation" and "
 (This experiment is using DeepMind's [dsprite data set](https://github.com/deepmind/dsprites-dataset).)
 
 
-Z  | Image                             | Parameter | Variance
+Z  | Image                             | Parameter | Variance |    | Z  | Image                             | Parameter | Variance
+---| ----------------------------------|---------- |-------|----
 ---| ----------------------------------|---------- |-------
-z0 | ![](disentangle_anim/anim_z0.gif) |           | 0.9216
-z1 | ![](disentangle_anim/anim_z1.gif) |           | 0.9216
-z2 | ![](disentangle_anim/anim_z2.gif) | Rotation  | 0.0011
-z3 | ![](disentangle_anim/anim_z3.gif) | Rotation? | 0.0038
-z4 | ![](disentangle_anim/anim_z4.gif) | Pos X     | 0.0002
-z5 | ![](disentangle_anim/anim_z5.gif) |           | 0.9384
-z6 | ![](disentangle_anim/anim_z6.gif) | Scale?    | 0.0004
-z7 | ![](disentangle_anim/anim_z7.gif) |           | 0.8991
-z8 | ![](disentangle_anim/anim_z8.gif) |           | 0.9483
-z9 | ![](disentangle_anim/anim_z9.gif) | Pos Y     | 0.0004
+z0 | ![](disentangle_anim/anim_z0.gif) |           | 0.9216 |    | z5 | ![](disentangle_anim/anim_z5.gif) |           | 0.9384
+z1 | ![](disentangle_anim/anim_z1.gif) |           | 0.9216 |    | z6 | ![](disentangle_anim/anim_z6.gif) | Scale?    | 0.0004
+z2 | ![](disentangle_anim/anim_z2.gif) | Rotation  | 0.0011 |    | z7 | ![](disentangle_anim/anim_z7.gif) |           | 0.8991
+z3 | ![](disentangle_anim/anim_z3.gif) | Rotation? | 0.0038 |    | z8 | ![](disentangle_anim/anim_z8.gif) |           | 0.9483
+z4 | ![](disentangle_anim/anim_z4.gif) | Pos X     | 0.0002 |    | z9 | ![](disentangle_anim/anim_z9.gif) | Pos Y     | 0.0004
 
 
 ## Reconstruction
