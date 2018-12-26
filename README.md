@@ -78,31 +78,10 @@ z4 | ![](disentangle_anim/anim_z4.gif) | Pos X     | 0.0002   |    | z9 | ![](di
 
 ## Reconstruction
 
-Left: original Right: reconstructed image
-
-![](reconstr_img/org_0.png)
-![](reconstr_img/reconstr_0.png)
-
-![](reconstr_img/org_1.png)
-![](reconstr_img/reconstr_1.png)
-
-![](reconstr_img/org_2.png)
-![](reconstr_img/reconstr_2.png)
-
-![](reconstr_img/org_3.png)
-![](reconstr_img/reconstr_3.png)
-
-![](reconstr_img/org_4.png)
-![](reconstr_img/reconstr_4.png)
-
-![](reconstr_img/org_5.png)
-![](reconstr_img/reconstr_5.png)
-
-![](reconstr_img/org_7.png)
-![](reconstr_img/reconstr_7.png)
-
-![](reconstr_img/org_8.png)
-![](reconstr_img/reconstr_8.png)
-
-![](reconstr_img/org_9.png)
-![](reconstr_img/reconstr_9.png)
+| Original Image              | Reconstructed Image              |   | Original Image              | Reconstructed Image
+| ----------------------------|----------------------------------|---| ----------------------------|---------------------------------
+| ![](reconstr_img/org_0.png) | ![](reconstr_img/reconstr_0.png) |   | ![](reconstr_img/org_5.png) | ![](reconstr_img/reconstr_5.png)
+| ![](reconstr_img/org_1.png) | ![](reconstr_img/reconstr_1.png) |   | ![](reconstr_img/org_6.png) | ![](reconstr_img/reconstr_6.png)
+| ![](reconstr_img/org_2.png) | ![](reconstr_img/reconstr_2.png) |   | ![](reconstr_img/org_7.png) | ![](reconstr_img/reconstr_7.png)
+| ![](reconstr_img/org_3.png) | ![](reconstr_img/reconstr_3.png) |   | ![](reconstr_img/org_8.png) | ![](reconstr_img/reconstr_8.png)
+| ![](reconstr_img/org_4.png) | ![](reconstr_img/reconstr_4.png) |   | ![](reconstr_img/org_9.png) | ![](reconstr_img/reconstr_9.png)
