@@ -23,6 +23,10 @@ A disentangled representation can be defined as one where single latent units ar
 
 Follows the architecture of variational autoencoder (VAE) framework with an adjustable hyperparameter β (β = 1 corresponds to regular VAE). This hyperparameter imposes a limit on the capacity of the latent information channel and an emphasis on learning statistically independent latent factors. This, when combined with the data log likelihood maximisation objective of generative models, leads to the model acquiring the most efficient latent representation of the data, which is disentangled if the data is produced using at least some ground truth factors of variation that are independent.
 
+![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/old_beta_loss.png)
+
+The above equation forms the objective function that needs to be **maximized**. While the first term accounts for reconstruction fidelity, the second term is a measure of the KL distance of learnt posterior and Gaussian prior $p(z)$ (puts implicit independence pressure derived from the isotropic nature of Gaussian prior). Hence, higher values of β should encourage learning a disentangled representation of v. The extra pressures coming from high β values, however, may create a trade-off between reconstruction fidelity and the quality of disentanglement within the learnt latent representations.
+
 ![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/disentangled_loss.png)
 
 ## Dataset Description
