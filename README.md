@@ -35,7 +35,7 @@ where *C* is the latent encoding capacity that is linearly increased over 100,00
 
 ## Model Architecture
 
-- `conv_beta_vae` : The encoder for the VAEs consists of 4 convolutional layers, each with 32 channels, 4x4 kernels, and a stride of 2. This is followed by 2 fully connected layers, each of 256 units. The latent distribution consisted of one fully connected layer of 20 units parametrising the mean and log standard deviation of 10 Gaussian random variables. The decoder architecture was simply the transpose of the encoder, but with the output parametrising Bernoulli distributions over the pixels.
+- `conv_beta_vae` : The encoder for the VAEs consists of 4 convolutional layers, each with 32 channels, 4x4 kernels, and a stride of 2. This is followed by 2 fully connected layers, each of 256 units. The latent distribution consists of one fully connected layer of 20 units parametrising the mean and log standard deviation of 10 Gaussian random variables. The decoder architecture is simply the transpose of the encoder, but with the output parametrising Bernoulli distributions over the pixels.
 - `beta_vae` : Input(4096, flattened)->FC(1200)->FC(1200)->FC(10)->FC(1200)->FC(1200)->FC(1200)->FC(4096)
 - ReLU activations are used throughout.
 - Adam optimiser with a learning rate of 5e-4 is used to train the network.
