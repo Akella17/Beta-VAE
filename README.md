@@ -19,9 +19,9 @@ A disentangled representation can be defined as one where single latent units ar
 - zero-shot inference, where reasoning about new data is enabled by recombining previously learnt factors.
 
 
-## Methodology
+## Some thoery
 
-Follows the architecture of variational autoencoder (VAE) framework with an adjustable hyperparameter β (β = 1 corresponds to regular VAE). This hyperparameter imposes a limit on the capacity of the latent information channel and an emphasis on learning statistically independent latent factors. This, when combined with the data log likelihood maximisation objective of generative models, leads to the model acquiring the most efficient latent representation of the data, which is disentangled if the data is produced using at least some ground truth factors of variation that are independent.
+Follows the variational autoencoder (VAE) framework with an adjustable hyperparameter β (β = 1 corresponds to regular VAE). This hyperparameter imposes a limit on the capacity of the latent information channel and an emphasis on learning statistically independent latent factors. This, when combined with the data log likelihood maximisation objective of generative models, leads to the model acquiring the most efficient latent representation of the data, which is disentangled if the data is produced using at least some ground truth factors of variation that are independent.
 
 ![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/old_beta_loss.png)
 
