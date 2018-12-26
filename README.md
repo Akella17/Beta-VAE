@@ -68,16 +68,13 @@ Latent variables with small variances seem extracting "x", "y", "rotation" and "
 
 (This experiment is using DeepMind's [dsprite data set](https://github.com/deepmind/dsprites-dataset).)
 
-
 Z  | Image                             | Parameter | Variance |    | Z  | Image                             | Parameter | Variance
----| ----------------------------------|---------- |-------|----
----| ----------------------------------|---------- |-------
-z0 | ![](disentangle_anim/anim_z0.gif) |           | 0.9216 |    | z5 | ![](disentangle_anim/anim_z5.gif) |           | 0.9384
-z1 | ![](disentangle_anim/anim_z1.gif) |           | 0.9216 |    | z6 | ![](disentangle_anim/anim_z6.gif) | Scale?    | 0.0004
-z2 | ![](disentangle_anim/anim_z2.gif) | Rotation  | 0.0011 |    | z7 | ![](disentangle_anim/anim_z7.gif) |           | 0.8991
-z3 | ![](disentangle_anim/anim_z3.gif) | Rotation? | 0.0038 |    | z8 | ![](disentangle_anim/anim_z8.gif) |           | 0.9483
-z4 | ![](disentangle_anim/anim_z4.gif) | Pos X     | 0.0002 |    | z9 | ![](disentangle_anim/anim_z9.gif) | Pos Y     | 0.0004
-
+---| ----------------------------------|---------- |----------|----|----| ----------------------------------|---------- |-------
+z0 | ![](disentangle_anim/anim_z0.gif) |           | 0.9216   |    | z5 | ![](disentangle_anim/anim_z5.gif) |           | 0.9384
+z1 | ![](disentangle_anim/anim_z1.gif) |           | 0.9216   |    | z6 | ![](disentangle_anim/anim_z6.gif) | Scale?    | 0.0004
+z2 | ![](disentangle_anim/anim_z2.gif) | Rotation  | 0.0011   |    | z7 | ![](disentangle_anim/anim_z7.gif) |           | 0.8991
+z3 | ![](disentangle_anim/anim_z3.gif) | Rotation? | 0.0038   |    | z8 | ![](disentangle_anim/anim_z8.gif) |           | 0.9483
+z4 | ![](disentangle_anim/anim_z4.gif) | Pos X     | 0.0002   |    | z9 | ![](disentangle_anim/anim_z9.gif) | Pos Y     | 0.0004
 
 ## Reconstruction
 
