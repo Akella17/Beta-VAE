@@ -31,7 +31,14 @@ The latest ![paper](https://arxiv.org/abs/1804.03599) suggests new intuitions an
 
 ![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/disentangled_loss.png)
 
-where *C* is the latent encoding capacity that is linearly increased over 100,000 training steps from 0 to 25. This step enables progressively more factors of variation to be represented whilst retaining disentangling in previously learned factors. ![](https://latex.codecogs.com/gif.latex?\gamma) used was 1000, which was chosen to be large enough to ensure the actual KL was always close to the target KL, C. For dSprites, C was linearly increased from 0 to 25 nats over the course of 100,000 training iterations, for CelebA it was increased to 50 nats.
+where *C* is the latent encoding capacity that is linearly increased over 100,000 training steps from 0 to 25 nats. This step enables progressively more factors of variation to be represented whilst retaining disentangling in previously learned factors. ![](https://latex.codecogs.com/gif.latex?\gamma) is chosen as 1000, which is large enough to ensure the actual KL remains close to the target KL (*C*).
+
+## Model Architecture
+
+- `conv_beta_vae` : The encoder for the VAEs consists of 4 convolutional layers, each with 32 channels, 4x4 kernels, and a stride of 2. This is followed by 2 fully connected layers, each of 256 units. The latent distribution consisted of one fully connected layer of 20 units parametrising the mean and log standard deviation of 10 Gaussian random variables. The decoder architecture was simply the transpose of the encoder, but with the output parametrising Bernoulli distributions over the pixels.
+- `beta_vae` : Input(4096, flattened) -> FC(1200) -> FC(1200) -> FC(10) -> FC(1200) -> FC(1200) -> FC(1200) -> FC(4096)
+- ReLU activations are used throughout.
+- Adam optimiser with a learning rate of 5e-4 is used to train the network.
 
 ## Dataset Description
 
