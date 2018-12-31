@@ -33,7 +33,7 @@ The latest [paper](https://arxiv.org/abs/1804.03599) suggests new intuitions and
 
 where *C* is the latent encoding capacity that is linearly increased over 100,000 training steps from 0 to 25 nats. This step enables progressively more factors of variation to be represented whilst retaining disentangling in previously learned factors. ![](https://latex.codecogs.com/gif.latex?\gamma) is chosen as 1000, which is large enough to ensure the actual KL remains close to the target KL (*C*).
 
-> Note: The second term takes the absolute of difference between the actual and target KL. This is important because the objective is to minimize the absolute difference (i.e., magnitude) and when it changes its sign (+ve to -ve, or -ve to +ve), the corresponding gradient directions also shall reverse. Taking a large *C* thus ensures that the 1<sup>st</sup> term is maximized, while constraining the network's capacity in the close neighborhood of target KL.
+> Note: The second term takes the absolute of difference between the actual and target KL. This is important because the objective is to minimize the absolute difference (i.e., magnitude) and when it changes its sign (+ve to -ve, or -ve to +ve), the corresponding gradient directions also shall reverse. Taking a large *C* thus ensures that the 1<sup>st</sup> term is maximized, while constraining the network's capacity to the neighborhood of target KL.
 
 ## Model Architecture
 
