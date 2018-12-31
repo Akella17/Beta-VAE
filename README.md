@@ -25,13 +25,15 @@ Follows the variational autoencoder (VAE) framework with an adjustable hyperpara
 
 ![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/old_beta_loss.png)
 
-The above equation forms the objective function that needs to be **maximized**. While the first term accounts for reconstruction fidelity, the second term is a measure of the KL distance of learnt posterior and Gaussian prior *p(z)* (puts implicit independence pressure due to the isotropic nature of Gaussian prior). Higher values of β should encourage learning a more disentangled representation. The extra pressures coming from high β values, however, may create a trade-off between reconstruction fidelity and the quality of disentanglement within the learnt latent representations.
+The above equation forms the ELBO objective function that needs to be **maximized**. While the first term accounts for reconstruction fidelity, the second term is a measure of the KL distance of learnt posterior and Gaussian prior *p(z)* (puts implicit independence pressure due to the isotropic nature of Gaussian prior). Higher values of β should encourage learning a more disentangled representation. The extra pressures coming from high β values, however, may create a trade-off between reconstruction fidelity and the quality of disentanglement within the learnt latent representations.
 
 The latest [paper](https://arxiv.org/abs/1804.03599) suggests new intuitions and theoretical assessments of the emergence of disentangled representation in variational autoencoders. It proposes a modification to the training regime of β-VAE, that progressively increases the information capacity of the latent code during training. This modification facilitates the robust learning of disentangled representations in β-VAE, without the previous trade-off in reconstruction accuracy. The new objective function is as follows:
 
 ![](https://github.com/Akella17/Disentangled_Representation_Learning/raw/master/dsprites/disentangled_loss.png)
 
 where *C* is the latent encoding capacity that is linearly increased over 100,000 training steps from 0 to 25 nats. This step enables progressively more factors of variation to be represented whilst retaining disentangling in previously learned factors. ![](https://latex.codecogs.com/gif.latex?\gamma) is chosen as 1000, which is large enough to ensure the actual KL remains close to the target KL (*C*).
+
+> Note: The second term takes the absolute of difference between the actual and target KL. This is important because the difference is being minimized and when it changes its sign (+ve to -ve, or -ve to +ve), the corresponding gradient directions also shall reverse.
 
 ## Model Architecture
 
